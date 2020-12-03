@@ -36,14 +36,12 @@ class App extends Component {
 }
 
 function LoadNewImage(){
-  console.log("Chamada1")
   return(
     getDogsFromApi
   );
 }
 
 const getDogsFromApi = () => {
-  console.log("Chamada")
   return fetch('https://dog.ceo/api/breeds/image/random')
     .then((response) => response.json())
     .then((json) => {
