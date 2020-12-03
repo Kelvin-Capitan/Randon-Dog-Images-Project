@@ -36,12 +36,6 @@ class App extends Component {
 }
 
 function LoadNewImage(){
-  return(
-    getDogsFromApi
-  );
-}
-
-const getDogsFromApi = () => {
   return fetch('https://dog.ceo/api/breeds/image/random')
     .then((response) => response.json())
     .then((json) => {
@@ -50,7 +44,7 @@ const getDogsFromApi = () => {
     .catch((error) => {
       console.error(error);
     });
-};
+}
 
 const styles = StyleSheet.create({
   container: {
